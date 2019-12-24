@@ -1,0 +1,7 @@
+import "message.proto";
+
+package sunco;
+
+service Echoer {
+    rpc Echo (Message) returns (Message) {}
+}

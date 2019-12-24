@@ -10,6 +10,7 @@
   "author": "Andrew Lavers <alavers@system42.net> (http://smooch.io)",
   "license": "ISC",
   "dependencies": {
+    "@grpc/grpc-js": "^0.6.15",
     "@grpc/proto-loader": "^0.5.3",
     "google-protobuf": "^3.11.2",
     "protobufjs": "^6.8.8"

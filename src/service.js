@@ -9,6 +9,86 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
+$root.sunco = (function() {
+
+    /**
+     * Namespace sunco.
+     * @exports sunco
+     * @namespace
+     */
+    var sunco = {};
+
+    sunco.Echoer = (function() {
+
+        /**
+         * Constructs a new Echoer service.
+         * @memberof sunco
+         * @classdesc Represents an Echoer
+         * @extends $protobuf.rpc.Service
+         * @constructor
+         * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+         * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+         * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+         */
+        function Echoer(rpcImpl, requestDelimited, responseDelimited) {
+            $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+        }
+
+        (Echoer.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Echoer;
+
+        /**
+         * Creates new Echoer service using the specified rpc implementation.
+         * @function create
+         * @memberof sunco.Echoer
+         * @static
+         * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+         * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+         * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+         * @returns {Echoer} RPC service. Useful where requests and/or responses are streamed.
+         */
+        Echoer.create = function create(rpcImpl, requestDelimited, responseDelimited) {
+            return new this(rpcImpl, requestDelimited, responseDelimited);
+        };
+
+        /**
+         * Callback as used by {@link sunco.Echoer#echo}.
+         * @memberof sunco.Echoer
+         * @typedef EchoCallback
+         * @type {function}
+         * @param {Error|null} error Error, if any
+         * @param {Message} [response] Message
+         */
+
+        /**
+         * Calls Echo.
+         * @function echo
+         * @memberof sunco.Echoer
+         * @instance
+         * @param {IMessage} request Message message or plain object
+         * @param {sunco.Echoer.EchoCallback} callback Node-style callback called with the error, if any, and Message
+         * @returns {undefined}
+         * @variation 1
+         */
+        Object.defineProperty(Echoer.prototype.echo = function echo(request, callback) {
+            return this.rpcCall(echo, $root.Message, $root.Message, request, callback);
+        }, "name", { value: "Echo" });
+
+        /**
+         * Calls Echo.
+         * @function echo
+         * @memberof sunco.Echoer
+         * @instance
+         * @param {IMessage} request Message message or plain object
+         * @returns {Promise<Message>} Promise
+         * @variation 2
+         */
+
+        return Echoer;
+    })();
+
+    return sunco;
+})();
+
 $root.Message = (function() {
 
     /**
