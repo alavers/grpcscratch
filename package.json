@@ -1,0 +1,20 @@
+{
+  "name": "grpcscratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pbjs -t static-module -w commonjs -o src/message.js src/message.proto && pbts -o src/message.d.ts src/message.js && tsc"
+  },
+  "keywords": [],
+  "author": "Andrew Lavers <alavers@system42.net> (http://smooch.io)",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "google-protobuf": "^3.11.2",
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.0"
+  }
+}
